@@ -1,0 +1,185 @@
+.navbar-brand {
+  color: white;
+  text-shadow: 0 0 8px black; }
+
+.imagen-index, .imagen-contacto {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center; }
+
+.galeria-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 300px 300px 300px;
+  margin-top: 45px;
+  padding-left: 70px;
+  padding-right: 70px; }
+  .galeria-grid-container .galeria-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center; }
+  .galeria-grid-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: blur(2px);
+    transition: filter 0.3s ease-in; }
+    .galeria-grid-container img:hover {
+      filter: blur(0px); }
+
+.img-fluid {
+  width: 1214px;
+  height: 697px;
+  filter: sepia(60%); }
+  .img-fluid:hover {
+    filter: none; }
+
+.discografia-listado {
+  position: relative;
+  padding-top: 5px;
+  margin-bottom: 10px; }
+  .discografia-listado .discografia-imagen {
+    line-height: 0;
+    overflow: hidden;
+    object-fit: contain; }
+    .discografia-listado .discografia-imagen img {
+      filter: blur(0px);
+      transition: filter 0.3s ease-in;
+      transform: scale(1.1); }
+  .discografia-listado .discografia-descripcion, .discografia-listado .discografia-descripcion-grande {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    text-align: center;
+    background: rgba(90, 0, 10, 0.4);
+    color: white !important;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .discografia-listado .discografia-descripcion-grande {
+    font-size: 1em; }
+  .discografia-listado:hover .discografia-descripcion, .discografia-listado:hover .discografia-descripcion-grande {
+    opacity: 1; }
+  .discografia-listado:hover .discografia-imagen img {
+    filter: blur(2px); }
+
+.spotify-edda {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 30px; }
+
+@media screen and (max-width: 1024px) {
+  .spotify-edda {
+    display: flex;
+    flex-direction: column; } }
+
+@media screen and (max-width: 1024px) {
+  .galeria-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    margin-top: 45px;
+    padding-left: 70px;
+    padding-right: 70px; } }
+
+@media screen and (max-width: 480px) {
+  .galeria-grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    margin-top: 45px;
+    padding-left: 70px;
+    padding-right: 70px; } }
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0; }
+    .col-25 .formulario-contacto, .col-75 .formulario-contacto, input[type=submit] .formulario-contacto {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      margin: auto; } }
+
+@media (hover: none) {
+  .discografia-descripcion, .discografia-listado .discografia-descripcion-grande {
+    opacity: 1; }
+  .discografia-imagen img {
+    filter: blur(2px); } }
+
+.formulario-contacto {
+  box-sizing: border-box;
+  width: 70%;
+  height: 70%;
+  margin: auto; }
+  .formulario-contacto .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px; }
+    .formulario-contacto .container input[type=text], .formulario-contacto .container select, .formulario-contacto .container textarea, .formulario-contacto .container input [type=date], .formulario-contacto .container select, .formulario-contacto .container textarea, .formulario-contacto .container input[type=date] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid aliceblue;
+      border-radius: 4px;
+      resize: vertical; }
+    .formulario-contacto .container label {
+      padding: 12px 12px 12px 0;
+      display: inline-block; }
+    .formulario-contacto .container input[type=submit] {
+      background-color: #45a040;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right; }
+      .formulario-contacto .container input[type=submit]:hover {
+        background-color: #45a040; }
+    .formulario-contacto .container .col-30 {
+      float: left;
+      width: 25%;
+      margin-top: 6px; }
+    .formulario-contacto .container .col-70 {
+      float: left;
+      width: 75%;
+      margin-top: 6px; }
+    .formulario-contacto .container .row:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .formulario-contacto .container .row-submit {
+      padding-top: 10px; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 15px;
+  background-color: black; }
+  footer .instagram, footer .facebook, footer .twitter {
+    border-radius: 5px;
+    width: 50px;
+    height: 50px; }
+    footer .instagram:hover, footer .facebook:hover, footer .twitter:hover {
+      background-color: aliceblue; }
+  footer .redes {
+    align-items: center;
+    text-align: center; }
+    footer .redes a {
+      font-size: xx-large; }
+  footer .copyright {
+    color: aliceblue; }

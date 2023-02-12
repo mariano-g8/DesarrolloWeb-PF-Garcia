@@ -1,0 +1,99 @@
+.imagen-index {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.galeria-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 300px 300px 300px;
+    margin-top: 45px;
+    padding-left: 70px;
+    padding-right: 70px;
+
+    .galeria-item {
+        background-color: $color-galeria;
+        border: 1px solid $color-negro;
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        }
+
+        & img {
+        @include sizes(100%,100%)
+        object-fit: contain;
+        filter: blur(2px);
+        transition: filter 0.3s ease-in;
+        
+            &:hover {
+            filter: blur(0px);
+            }
+        }
+    }
+.img-fluid{
+    @include sizes(1214px,697px)
+    filter: sepia(60%);
+
+    &:hover{
+        filter: none;
+        }
+    }
+
+.discografia-listado {
+    position: relative;
+    padding-top: 5px;
+    margin-bottom: 10px;
+  
+  
+        .discografia-imagen {
+            line-height: 0;
+            overflow: hidden;
+            object-fit: contain;
+          
+             img {
+                filter: blur(0px);
+                transition: filter 0.3s ease-in;
+                transform: scale(1.1);
+            }
+        }    
+  
+        .discografia-descripcion {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-decoration: none;
+        z-index: 1;
+        position: absolute;
+        @include sizes(100%,100%)
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity .5s;
+        text-align: center;
+        background: $color-discografia;
+        color: $color-blanco!important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        .discografia-descripcion-grande {
+            @extend .discografia-descripcion;
+            font-size: 1em;
+        }
+    
+    &:hover .discografia-descripcion {
+    opacity: 1;
+    }
+  
+    &:hover .discografia-imagen img {
+    filter: blur(2px);
+    }
+}
+  
+
+.imagen-contacto {
+    @extend .imagen-index;
+    
+    
+} 

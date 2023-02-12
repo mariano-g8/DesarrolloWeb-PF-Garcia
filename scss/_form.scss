@@ -1,0 +1,74 @@
+.formulario-contacto {
+  box-sizing: border-box;
+  @include sizes (70%,70%);
+  margin: auto;
+
+  .container {
+    border-radius: 5px;
+    background-color: $color-formulario;
+    padding: 20px;
+ 
+
+    input[type=text], select, textarea, input[type=date] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid $color-aliceblue;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    select {
+      @extend input[type=text]
+    }
+    textarea {
+      @extend input[type=text]
+    }
+    input [type=date]{
+      @extend input[type=text]
+    }
+
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+
+    input[type=submit] {
+      background-color: $color-submit;
+      color: $color-blanco;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    
+
+      &:hover {
+      background-color: $color-submit;
+    }
+  }
+
+
+
+      .col-30 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+      }
+
+      .col-70 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .row-submit {
+        padding-top: 10px;
+            }  
+
+}
+}
